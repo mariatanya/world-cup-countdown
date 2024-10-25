@@ -9,55 +9,62 @@ body {
 }
 
 .container {
-  font-family: "Varela Round", sans-serif; /* Use your nice font throughout */
+  font-family: "Varela Round", sans-serif;
   padding: 2rem 0;
 }
 
 #countdown {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive font size */
   font-family: monospace;
   white-space: nowrap;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1); /* Subtle background */
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Remove border and modify link colors */
+.card-title {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+}
+
+/* Nav tabs styles remain the same */
 .nav-tabs {
-  border-bottom: none; /* Remove bottom border */
+  border-bottom: none;
 }
 
 .nav-tabs .nav-link {
-  color: navy; /* Set link color to navy */
-  border: none; /* Remove borders around links */
-  background: transparent; /* Remove background */
+  color: navy;
+  border: none;
+  background: transparent;
 }
 
 .nav-tabs .nav-link.active {
-  color: navy; /* Keep active link navy */
-  border: none; /* Remove borders for active state */
-  background: transparent; /* Remove white background from active tab */
-}
-
-/* Optional: Add hover effect */
-.nav-tabs .nav-link:hover {
-  color: #000080; /* Slightly darker navy on hover */
+  color: navy;
   border: none;
-  background: rgba(0, 0, 128, 0.1); /* Very subtle background on hover */
+  background: transparent;
 }
 
+.nav-tabs .nav-link:hover {
+  color: #000080;
+  border: none;
+  background: rgba(0, 0, 128, 0.1);
+}
+
+/* Revised media queries */
 @media (max-width: 768px) {
   .card {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 250px; /* Adjust as needed */
-    max-height: none; /* Allow height to grow */
+    min-width: 100% !important; /* Override inline styles */
+    max-width: 100% !important;
+    min-height: auto !important; /* Let height be automatic */
+    padding: 1rem !important;
   }
+}
 
-  .card-title,
-  #countdown {
-    font-size: 1.5rem; /* Smaller font size for smaller screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .card {
+    min-width: 18.75rem !important;
+    max-width: 25rem !important;
+    min-height: auto !important;
   }
 }
