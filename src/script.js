@@ -1,10 +1,10 @@
 // Set the date you're counting down to (8:00 PM ET / 3:00 AM SAST on November 6, 2024)
-const pollClosingTime = new Date("Nov 6, 2024 03:00:00").getTime();
+const worldCupStart = new Date("Jun 11, 2026 00:00:00").getTime();
 
 // Update the countdown every second
 const countdown = setInterval(function () {
   const now = new Date().getTime();
-  const timeLeft = pollClosingTime - now;
+  const timeLeft = worldCupStart - now;
 
   // Calculate days, hours, minutes, and seconds
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -28,6 +28,6 @@ const countdown = setInterval(function () {
   // If the countdown is finished, display a message
   if (timeLeft < 0) {
     clearInterval(countdown);
-    document.getElementById("countdown").innerHTML = "Polls are closed!";
+    document.getElementById("countdown").innerHTML = "Enjoy the game!";
   }
 }, 1000);

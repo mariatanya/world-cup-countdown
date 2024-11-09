@@ -1,11 +1,5 @@
-:root {
-  --background: linear-gradient(90deg, #4a90e2, #ff5f6d);
-}
-
 body {
-  background: url("https://www.transparenttextures.com/patterns/gray-floral.png");
-  background-color: #eaf6ff;
-  background-size: cover;
+  background-image: url("https://www.transparenttextures.com/patterns/green-fibers.png");
 }
 
 .container {
@@ -13,72 +7,51 @@ body {
   padding: 2rem 0;
 }
 
+h1 i {
+  font-size: 1em; /* Adjust icon size */
+  color: #ffd700; /* Gold color for the icon */
+}
+
+.card {
+  position: relative;
+  background-color: #008c41;
+  background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+  background-repeat: repeat;
+}
+
 #countdown {
-  font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive font size */
+  font-size: clamp(3rem, 4vw, 6rem);
   font-family: monospace;
-  white-space: nowrap;
   padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background: linear-gradient(45deg, #c5a028, #ffd700, #cfb53b);
+  background-clip: text;
+  color: transparent;
+  transform: perspective(1000px) rotateX(10deg);
+  transition: transform 0.3s ease;
 }
 
-.card-title {
-  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+nav a {
+  color: #0d2b46;
+  border-radius: 15px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
 }
 
-/* Nav tabs styles remain the same */
-.nav-tabs {
-  border-bottom: none;
-}
-
-.nav-tabs .nav-link {
-  color: navy;
-  border: none;
-  background: transparent;
-}
-
-.nav-tabs .nav-link.active {
-  color: navy;
-  border: none;
-  background: transparent;
-}
-
-.nav-tabs .nav-link:hover {
-  color: #000080;
-  border: none;
-  background: rgba(0, 0, 128, 0.1);
+nav a:hover {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #fff;
 }
 
 footer {
   padding: 10px;
-  width: 100%; /* Makes footer span the full width */
+  width: 100%;
 }
 
 footer a {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
   color: navy;
 }
 
 footer a:hover {
-  text-decoration: underline; /* Add underline on hover for emphasis */
-}
-
-/* Revised media queries */
-@media (max-width: 768px) {
-  .card {
-    min-width: 100% !important; /* Override inline styles */
-    max-width: 100% !important;
-    min-height: auto !important; /* Let height be automatic */
-    padding: 1rem !important;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .card {
-    min-width: 18.75rem !important;
-    max-width: 25rem !important;
-    min-height: auto !important;
-  }
+  text-decoration: underline;
 }
