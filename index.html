@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="2026 FIFA World Cup Countdown Timer" />
     <title>2026 FIFA World Cup</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,36 +21,45 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container text-center">
       <div class="row">
-        <h1 class="my-3 text-dark-emphasis">
-          Are you ready for the World Cup? <i class="bi bi-trophy"></i>
-        </h1>
+        <header>
+          <h1 class="my-3 text-dark-emphasis">
+            Are you ready for the World Cup?
+            <i class="bi bi-trophy" aria-hidden="true"></i>
+          </h1>
+        </header>
+
         <div class="col-sm-12">
           <!-- Card Component -->
           <div
-            class="card my-5 py-3 px-auto mx-auto rounded-5 shadow-md"
+            class="card my-5 py-3 px-3 mx-auto rounded-5 shadow"
             style="min-width: 15rem; max-width: 50rem"
           >
             <div
               class="card-body d-flex flex-column justify-content-center align-items-center"
             >
-              <div id="countdown" class="card-text mx-4 rounded-5"></div>
+              <div
+                id="countdown"
+                class="card-text mx-4 rounded-5"
+                role="timer"
+                aria-live="polite"
+              ></div>
             </div>
           </div>
 
           <!-- Navigation Tabs -->
-
-          <nav class="navbar navbar-expand-lg">
+          <nav class="navbar navbar-expand-lg" role="navigation">
             <div class="container d-flex flex-column align-items-center">
               <a
                 class="navbar-brand"
                 href="https://www.fifa.com"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit FIFA's official website"
                 >FIFA HOME</a
               >
               <button
@@ -59,11 +69,12 @@
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
                 aria-expanded="false"
-                aria-label="Toggle navigation"
+                aria-label="Toggle navigation menu"
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
               <br />
+
               <div
                 class="collapse navbar-collapse justify-content-center"
                 id="navbarNav"
@@ -74,6 +85,8 @@
                       class="nav-link"
                       href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/host-cities"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View 2026 World Cup host cities"
                       >Host cities</a
                     >
                   </li>
@@ -82,6 +95,8 @@
                       class="nav-link"
                       href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/qualifiers"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Check World Cup qualification status"
                       >Qualifiers</a
                     >
                   </li>
@@ -90,6 +105,8 @@
                       class="nav-link"
                       href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/match-schedule-fixtures-results-teams-stadiums"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View World Cup match schedule"
                       >Schedule</a
                     >
                   </li>
@@ -98,6 +115,8 @@
                       class="nav-link"
                       href="https://auth.fifa.com/as/authorize?response_type=code&response_mode=form_post&client_id=51dcafd9-c39a-43d9-8e91-fafac25c436f&scope=openid&lang=en&redirect_uri=https%3A%2F%2Fwww.fifa.com&campaign=Fifacom-Web-ROIFWC2026ROI"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Purchase World Cup tickets"
                       >Tickets</a
                     >
                   </li>
@@ -113,29 +132,40 @@
           </h4>
 
           <!-- Footer -->
-          <footer class="text-center">
-            This project was coded by
-            <a
-              href="https://www.linkedin.com/in/maria-tanyaradzwa/"
-              target="_blank"
-              >Maria Kapatwa</a
-            >
-            and is on
-            <a
-              href="https://github.com/mariatanya/election-countdown"
-              target="_blank"
-              >Github</a
-            >
-            and also hosted on
-            <a
-              href="https://2026-world-cup-countdown.netlify.app/"
-              target="_blank"
-              >Netlify.</a
-            >
+          <footer class="text-center mt-4">
+            <p>
+              This project was coded by
+              <a
+                href="https://www.linkedin.com/in/maria-tanyaradzwa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Maria Kapatwa's LinkedIn profile"
+                >Maria Kapatwa</a
+              >
+              and is on
+              <a
+                href="https://github.com/mariatanya/election-countdown"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View source code on Github"
+                >Github</a
+              >
+              and also hosted on
+              <a
+                href="https://2026-world-cup-countdown.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit the live website"
+                >Netlify.</a
+              >
+            </p>
           </footer>
         </div>
       </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/script.js"></script>
   </body>
 </html>

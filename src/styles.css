@@ -1,5 +1,7 @@
 body {
-  background-image: url("https://www.transparenttextures.com/patterns/green-fibers.png");
+  background-image: url("green-fibers.png");
+  background-repeat: repeat;
+  background-position: center center;
 }
 
 .container {
@@ -8,8 +10,8 @@ body {
 }
 
 h1 i {
-  font-size: 1em; /* Adjust icon size */
-  color: #ffd700; /* Gold color for the icon */
+  font-size: 1em;
+  color: #ffd700;
 }
 
 .card {
@@ -17,6 +19,13 @@ h1 i {
   background-color: #008c41;
   background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
   background-repeat: repeat;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Moves the card up slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1); /* Larger, softer shadow */
 }
 
 #countdown {
